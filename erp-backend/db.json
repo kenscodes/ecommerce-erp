@@ -19,12 +19,12 @@
     {
       "name": "computer",
       "sku": "5",
-      "quantity": 0,
+      "quantity": 4,
       "price": 10,
       "category": "Electronics",
       "id": 1778430555625,
       "created_at": "2026-05-10T16:29:15.625Z",
-      "updated_at": "2026-05-11T02:56:23.768Z"
+      "updated_at": "2026-05-13T07:51:36.295Z"
     }
   ],
   "orders": [],

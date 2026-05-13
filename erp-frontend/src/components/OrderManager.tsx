@@ -174,22 +174,28 @@ export default function OrderManager() {
               <div className="order-items-section">
                 <h4>Add Items from Inventory</h4>
                 <div className="inventory-selector">
-                  <select
-                    onChange={(e) => {
-                      const invId = Number(e.target.value);
-                      if (invId) {
-                        addItemToOrder(invId, 1);
-                      }
-                    }}
-                    defaultValue=""
-                  >
-                    <option value="">Select item to add...</option>
-                    {inventory.filter(i => i.quantity > 0).map(item => (
-                      <option key={item.id} value={item.id}>
-                        {item.name} (SKU: {item.sku}) - ${item.price.toFixed(2)} - {item.quantity} in stock
-                      </option>
-                    ))}
-                  </select>
+                  {inventory.filter(i => i.quantity > 0).length === 0 ? (
+                    <div style={{ padding: '1rem', background: '#fff3cd', color: '#856404', borderRadius: '6px', marginBottom: '1rem' }}>
+                      Inventory is currently empty or out of stock. Please add items to the inventory first.
+                    </div>
+                  ) : (
+                    <select
+                      onChange={(e) => {
+                        const invId = Number(e.target.value);
+                        if (invId) {
+                          addItemToOrder(invId, 1);
+                        }
+                      }}
+                      defaultValue=""
+                    >
+                      <option value="">Select item to add...</option>
+                      {inventory.filter(i => i.quantity > 0).map(item => (
+                        <option key={item.id} value={item.id}>
+                          {item.name} (SKU: {item.sku}) - ${item.price.toFixed(2)} - {item.quantity} in stock
+                        </option>
+                      ))}
+                    </select>
+                  )}
                 </div>
 
                 {selectedItems.length > 0 && (

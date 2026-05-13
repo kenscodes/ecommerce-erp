@@ -143,9 +143,16 @@ body {
   font-size: 0.9rem;
   margin-right: 0.5rem;
   border-radius: 6px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   background: white;
+  color: #333;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-small:hover {
+  background: #f0f0f0;
+  border-color: #999;
 }
 
 .btn-danger {
@@ -238,6 +245,7 @@ tr:hover {
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
+  min-height: 46px;
 }
 
 .form-group input:focus,
@@ -354,10 +362,12 @@ tr:hover {
 
 .inventory-selector select {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 6px;
   margin-bottom: 1rem;
+  font-size: 1rem;
+  min-height: 46px;
 }
 
 .selected-items {
@@ -368,10 +378,11 @@ tr:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
   background: white;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  margin-bottom: 0.8rem;
 }
 
 .order-total {
