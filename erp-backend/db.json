@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "email": "sha@pmail.com",
+      "name": "sk",
+      "role": "employee",
+      "id": 1778430494390,
+      "created_at": "2026-05-10T16:28:14.390Z"
+    },
+    {
+      "email": "fgh@jk.com",
+      "name": "dfg",
+      "role": "admin",
+      "id": 1778430518541,
+      "created_at": "2026-05-10T16:28:38.541Z"
+    }
+  ],
+  "inventory": [
+    {
+      "name": "computer",
+      "sku": "5",
+      "quantity": 0,
+      "price": 10,
+      "category": "Electronics",
+      "id": 1778430555625,
+      "created_at": "2026-05-10T16:29:15.625Z",
+      "updated_at": "2026-05-11T02:56:23.768Z"
+    }
+  ],
+  "orders": [],
+  "orderItems": [
+    {
+      "order_id": 1778468183755,
+      "inventory_id": 1778430555625,
+      "quantity": 1,
+      "id": 1778468183768
+    }
+  ]
+}
